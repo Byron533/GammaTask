@@ -7,7 +7,7 @@
 		<h2>Tasks</h2>
 		<nav>
 		<ul>
-		<?php foreach ($taskList as $addTask) : ?>
+		<?php foreach ($task as $tasks) : ?>
 			<li>
 			<a href= "?action=<?php echo $taskList['tasks']; ?>">
 				<?php echo $action['task']; ?>

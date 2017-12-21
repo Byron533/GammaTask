@@ -2,6 +2,7 @@
 require('model/usersdb.php');
 require('model/DBclass.php');
 require('model/userclass.php');
+require('model/todoTask.php');
 
 
 $action = filter_input(INPUT_POST, 'action');

@@ -15,7 +15,9 @@
 				
 			}
 
-			function addTask ($id, $owneremail, $ownerid, $createddate, $duedate, $message, $isdone){
+		}
+
+				function addTask ($id, $owneremail, $ownerid, $createddate, $duedate, $message, $isdone){
 				$db = Database :: getDB();
 				$query = 'INSERT INTO bl54.todos 
 							(id, owneremail, ownerid, createddate, duedate, message, isdone)
@@ -38,5 +40,5 @@
 
 
 			
-		}
 	}
+?>

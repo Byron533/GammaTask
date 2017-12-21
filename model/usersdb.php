@@ -1,6 +1,6 @@
 <?php
 
-		class UsersDB {
+	class UsersDB {
         public static function getUsers(){
             $db = Database :: getDB();
             $query = 'SELECT * FROM bl54.accounts';
@@ -15,6 +15,8 @@
                 $users[] = new User($row['id'], $row['email'], $row['fname'], $row['lname'], $row['phone'], $row['birthday'], $row['gender'], $row['password'] );
 
             }
+
+        }
 
         public static function addUsers($fname, $lname, $email, $phone, $bday, $gender){
         	$db = Database :: getDB();
@@ -37,8 +39,8 @@
 
 
             return $users;
-            }
+            
 
-		    }
+	}
 
-            ?>
+?>
