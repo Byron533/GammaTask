@@ -16,7 +16,7 @@
 
             }
 
-        function addUsers($fname, $lname, $email, $phone, $bday, $gender){
+        public static function addUsers($fname, $lname, $email, $phone, $bday, $gender){
         	$db = Database :: getDB();
         	$query = 'INSERT INTO bl54.accounts
         				(fname, lname, email, phone, bday, gender)

@@ -1,4 +1,6 @@
+<!DOCTYPE html>
 <main>
+	<div class="container" align="center">
 	<h1> Task List </h1>
 
 	<aside>
@@ -18,40 +20,49 @@
 
 <section>
 	<h2><?php echo $task_list; ?></h2>
+	
 	<table>
 		<tr>
-			<th> ID</th>
+		 
+			<div>
+				<label><b>ID</b></label>
 			<input type="text" name="code"/>
-			<br>
+			</div>
 
-			<th> Owner Email </th>
+			<div>
+				<label><b>Owner Email</b></label>
 			<input type="text" name="name"/>
-			<br>
+			</div>
 
-			<th> Owner ID </th>
+			<div>
+				<label><b>Owner ID</b></label>
 			<input type="text" name="code"/>
-			<br>
+			</div>
 
-			<th> Created Date </th>
+			<div>
+				<label><b>Created Date</b></label>
 			<input id="date" type="date"/>
-			<br>
+			</div>
 
-			<th> Due Date </th>
+			<div>
+				<label><b>Due Date</b></label>
 			<input id="date" type="date"/>
-			<br>
+			</div>
 
-			<th> Message </th>
+			<div>
+				<label><b>Message</b></label>
 			<input type="text" name="name"/>
-			<br>
+			</div>
 
-			<th> Is Done? </th>
+			<div>
+				<label><b>Is Done?</b></label>
 			<input type="text" name="name"/>
-			<br>
+			</div>
 
 			<input type="submit" value="Submit Task">
-
 		</tr>
 	</table>
+</div>
 </section>
 </main>
 

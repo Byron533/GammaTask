@@ -14,27 +14,21 @@ if ($action == NULL) {
 if ($action == 'signup.html') {
     include('signup.php');
 } else if ($action == 'submit_signup') {
-    $fname = filter_input(INPUT_POST, 'fname',
-                FILTER_VALIDATE_INT);
-    $lname = filter_input(INPUT_POST, 'lname',
-                FILTER_VALIDATE_INT);
-    $email = filter_input(INPUT_POST, 'email',
-                FILTER_VALIDATE_INT);
-    $phone = filter_input(INPUT_POST, 'phone',
-                FILTER_VALIDATE_INT);
-    $bday = filter_input(INPUT_POST, 'bday',
-                FILTER_VALIDATE_INT);
-    $gender = filter_input(INPUT_POST, 'gender',
-                FILTER_VALIDATE_INT);
+    $fname = filter_input(INPUT_POST, 'fname');
+    $lname = filter_input(INPUT_POST, 'lname');
+    $email = filter_input(INPUT_POST, 'email');
+    $phone = filter_input(INPUT_POST, 'phone');
+    $bday = filter_input(INPUT_POST, 'bday');
+    $gender = filter_input(INPUT_POST, 'gender');
 
      UsersDB::addUsers($fname, $lname, $email, $phone, $bday, $gender);
 
-     header("Location: .?action=task_list");
+    header("Location: .?action=task_list.php");
 }
    
     
-        if ($action == 'todoTask.php'){
-        	include('task_list.php');
+        if ($action == 'task_list.php'){
+        	include('todoTask.php');
         } else if ($action == 'submit_task'){
         	$owneremail = filter_input(INPUT_POST, 'owneremail');
 			$ownerid = filter_input(INPUT_POST, 'ownerid');
@@ -44,7 +38,7 @@ if ($action == 'signup.html') {
 
 			todoTask::addTask($id, $owneremail, $ownerid, $createddate, $duedate, $message, $isdone);
 
-			header("Location: .?action=task_list");
+			header("Location: .?action=task_list.php");
 
         }
 
